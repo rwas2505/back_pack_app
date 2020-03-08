@@ -6,4 +6,12 @@ Rails.application.routes.draw do
   # namespace :api do
   #   get "/photos" => "photos#index"
   # end
+
+  namespace :api do
+    get  "/packs" => "packs#index"
+    post "/packs" => "packs#create"
+    get "/packs/:id" => "packs#show"
+    patch "/packs/:id" => "packs#update"
+    delete "/packs/:id" => "packs#destroy"
+  end
 end
